@@ -15,50 +15,52 @@ struct LandmarkDetail: View {
     var landmarkIndex: Int {
         modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
     }
-    
+
+
     var body: some View {
         @Bindable var modelData = modelData
-
-
+        
         ScrollView {
-            MapView(coordinate: landmark.locationCoordinate)
-                .frame(height: 300)
+            VStack {
+                CircleImage(image: landmark.image.resizable())
+                    .scaledToFit()
 
 
-            CircleImage(image: landmark.image)
-                .offset(y: -130)
-                .padding(.bottom, -130)
+                Text(landmark.name)
+                    .font(.headline)
+                    .lineLimit(0)
 
 
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(landmark.name)
-                        .font(.title)
-                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                Toggle(isOn: $modelData.landmarks[landmarkIndex].isFavorite) {
+                    Text("Favorite")
                 }
-
-                HStack {
-                    Text(landmark.park)
-                    Spacer()
-                    Text(landmark.state)
-                }
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
 
 
                 Divider()
 
 
-                Text("About \(landmark.name)")
-                    .font(.title2)
-                Text(landmark.description)
+                Text(landmark.park)
+                    .font(.caption)
+                    .bold()
+                    .lineLimit(0)
+
+
+                Text(landmark.state)
+                    .font(.caption)
+
+
+                Divider()
+
+
+                MapView(coordinate: landmark.locationCoordinate)
+                    .scaledToFit()
             }
-            .padding()
+            .padding(16)
         }
-        .navigationTitle(landmark.name)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("Landmarks")
     }
 }
+
 
 
 #Preview {
