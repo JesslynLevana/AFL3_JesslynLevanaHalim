@@ -61,6 +61,7 @@
 		3FE24AF12BDA311300EC773A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE24AF02BDA311300EC773A /* PageViewController.swift */; };
 		3FE24AF32BDA31CF00EC773A /* FeaturedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE24AF22BDA31CF00EC773A /* FeaturedCard.swift */; };
 		3FE24AF52BDA320500EC773A /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE24AF42BDA320500EC773A /* PageView.swift */; };
+		3FEC09262BE487CE0029161A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC09252BE487CE0029161A /* NotificationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,8 @@
 		3FE24AF02BDA311300EC773A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		3FE24AF22BDA31CF00EC773A /* FeaturedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCard.swift; sourceTree = "<group>"; };
 		3FE24AF42BDA320500EC773A /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		3FEC09252BE487CE0029161A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3FEC09272BE488100029161A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,13 +193,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3F97F5B72BE35CDD00E30EFB /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		3F97F5BF2BE362B200E30EFB /* WatchLandmarks Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +201,8 @@
 				3F97F5C62BE362B300E30EFB /* Preview Content */,
 				3F97F5DF2BE366CC00E30EFB /* LandmarkDetail.swift */,
 				3F97F5E12BE368B500E30EFB /* NotificationView.swift */,
+				3FEC09252BE487CE0029161A /* NotificationController.swift */,
+				3FEC09272BE488100029161A /* PushNotificationPayload.apns */,
 			);
 			path = "WatchLandmarks Watch App";
 			sourceTree = "<group>";
@@ -254,7 +252,6 @@
 			children = (
 				3FE24AF22BDA31CF00EC773A /* FeaturedCard.swift */,
 				3F9092732BD0DB8600BB1BFE /* ContentView.swift */,
-				3F97F5B72BE35CDD00E30EFB /* New Group */,
 				3FE24AEF2BDA30E300EC773A /* PageView */,
 				3FE24AE52BDA2E1800EC773A /* Profiles */,
 				3FE24AD72BDA284300EC773A /* Hikes */,
@@ -483,6 +480,7 @@
 				3F97F5D52BE3657800E30EFB /* ModelData.swift in Sources */,
 				3F97F5D62BE3657800E30EFB /* LandmarksApp.swift in Sources */,
 				3F97F5D72BE3657800E30EFB /* Hike.swift in Sources */,
+				3FEC09262BE487CE0029161A /* NotificationController.swift in Sources */,
 				3F97F5D82BE3657800E30EFB /* Profile.swift in Sources */,
 				3F97F5E02BE366CC00E30EFB /* LandmarkDetail.swift in Sources */,
 				3F97F5E22BE368B500E30EFB /* NotificationView.swift in Sources */,
